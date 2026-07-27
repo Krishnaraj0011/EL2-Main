@@ -1,0 +1,166 @@
+{ 
+   "CreatedBy":"????",
+   "Account":"PyGuid",
+   "RequestingTradingPartnerID":"dd1a754a-01e9-4b5e-ad31-ce14c9d65e62",
+   "AssignedTradingPartnerID":"pMrEpO2ysOuRIbHr",
+   "CaseType":"PickupAndRelease",
+   "ServiceLevel":"Basic",
+   "Equipment":"Trailer",
+   "Mode":"CrowleyTL",
+   "PaymentTerm":"Inbound Prepaid",
+   "HotPriority":"false",
+   "PickupNotes":"test notes pickup",
+   "DeliveryNotes":"test delivery notes",
+   "OrderRefs":{
+      "BOL":"",
+      "TrackingNumber":"54321",
+      "InvoiceNumber":"",
+      "PickupNumber":"2646357511",
+      "DeliveryNumber":"",
+      "PONumber":"6545646",
+      "SONumber":""
+   },
+   "OrderOrigin":{
+      "CompanyName":"Consol Crowley C/O MLM Logistics",
+      "Address1":"460 STERLING STREET",
+      "Address2":"",
+      "City":"Camp Hill",
+      "State":"PA",
+      "PostalCode":"17011",
+      "Country":"US",
+      "Phone":"9872726221",
+      "Email":"",
+      "ContactName":"CROWLEY Logistics"
+   },
+   "OrderDestination":{
+      "CompanyName":"000SUU-94535-FY9150 60 APS TRK INTRANSIT CARGO BLDG 977 CP 7",
+      "Address1":"BLDG 977 CP 707 424 3992 90 RAGSDALE ST",
+      "Address2":"",
+      "City":"TRAVIS AFB",
+      "State":"CA",
+      "PostalCode":"94535",
+      "Country":"USA",
+      "Phone":"qwer",
+      "Email":"",
+      "ContactName":"CROWLEY Logistics"
+   },
+   "BillTo":{
+      "CompanyName":"Crowley Maritime",
+      "Address1":"8200 NATIONS WAY",
+      "Address2":"",
+      "City":"JACKSONVILLE",
+      "State":"FL",
+      "PostalCode":"32256",
+      "Country":"USA",
+      "Phone":"",
+      "Email":"",
+      "ContactName":""
+   },
+   "OrderAgent":{
+      "CompanyName":"Crowley Consolidation - Universal Logistics Tracy",
+      "Address1":"11980 SOUTH HARLAN ROAD",
+      "Address2":"",
+      "City":"LATHROP",
+      "PostalCode":"95330",
+      "State":"CA",
+      "Country":"USA"
+   },
+   "AccessorialItemList" : [ {
+        "AccessorialCode" : "HIPRIS",
+        "AccessorialQuantity" : "1",
+        "AccessorialLocation" : "Delivery"
+         }, 
+         {
+         "AccessorialCode" : "HIINS",
+         "AccessorialQuantity" : "1",
+         "AccessorialLocation" : "Pickup"
+         },
+         {
+         "AccessorialCode" : "LGATE",
+         "AccessorialQuantity" : "1",
+         "AccessorialLocation" : "Pickup"
+         }
+    ],
+   "Items":[
+      {
+         "SkuName":"WHEEL ASSEMBLY,PNEU",
+         "SkuDescription":"WHEEL ASSEMBLY,PNEU-Desc",
+         "TotalWeight":820,
+         "WeightUOM":"lb",
+         "ItemQuantity":2,
+         "ItemWeight":"1",
+         "PackageType":"1",
+         "PackageWeight":"1",
+         "PackageQuantity":"1",
+         "DangerousGoods":"test",
+         "HazmatClass":"test",
+         "FreightClass":"test",
+         "NMFC":"1",
+         "MaxTemp":"1",
+         "MinTemp":"1",
+         "OnHandlingUnit":[
+            {
+               "pyID":"TSCD67417"
+            }
+         ]
+      },
+            {
+         "SkuName":"WHEEL ASSEMBLY,PNEU",
+         "SkuDescription":"WHEEL ASSEMBLY,PNEU-Desc",
+         "TotalWeight":820,
+         "WeightUOM":"lb",
+         "ItemQuantity":2,
+         "ItemWeight":"1",
+         "PackageType":"1",
+         "PackageWeight":"1",
+         "PackageQuantity":"1",
+         "DangerousGoods":"test",
+         "HazmatClass":"test",
+         "FreightClass":"test",
+         "NMFC":"1",
+         "MaxTemp":"1",
+         "MinTemp":"1",
+         "OnHandlingUnit":[
+            {
+               "pyID":"TSCD67420"
+            }
+         ]
+      }
+   ],
+   "HandlingUnit":[
+       {
+         "HandlingUnitType":"Pallet",
+         "HandlingUnitQuantity":3,
+         "HandlingUnitClientID":"TSCD67417",
+         "FreightClass":"",
+         "TotalWeight":400,
+         "TareWeight":"",
+         "DIMS":{
+            "Length":"55",
+           "Width":"47",
+            "Height":"48",
+            "UOM":""
+         }
+      },
+      {
+         "HandlingUnitType":"Pallet",
+         "HandlingUnitQuantity":3,
+         "HandlingUnitClientID":"TSCD67420",
+         "FreightClass":"",
+         "TotalWeight":400,
+         "TareWeight":"",
+         "DIMS":{
+            "Length":"55",
+           "Width":"47",
+            "Height":"48",
+            "UOM":""
+         }
+      }
+   ],
+"PickupRequestTWStart":"20250127T120000.000 GMT",
+"PickupRequestTWEnd":"20250127T120000.000 GMT",
+"PickupGuaranteed":"false",
+"DeliverByTWStart":"20250127T120000.000 GMT",
+"DeliverByTWEnd":"20250127T120000.000 GMT",
+"DeliveryGuaranteed":"false" 
+}

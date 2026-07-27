@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Base_Class.TestNG_listener"/>
+  </listeners>
+  <test thread-count="5" name="Regression test">
+    <classes>
+      <class name="Test_Case.COD_UI_ordercreate"/>
+      <class name="Test_Case.Crowley_on_dock_test"/>
+    </classes>
+  </test> <!-- Regression test -->
+</suite> <!-- Failed suite [Suite] -->
