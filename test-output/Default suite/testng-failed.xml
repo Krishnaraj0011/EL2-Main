@@ -3,17 +3,21 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="Test_Case.Crowley_on_dock_test"/>
+      <class name="Test_Case.COD_exception_singlecaseflow">
+        <methods>
+          <include name="COD_shortage_exception_2"/>
+        </methods>
+      </class> <!-- Test_Case.COD_exception_singlecaseflow -->
     </classes>
   </test> <!-- Default test -->
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="Test_Case.Crowley_on_dock_test">
+      <class name="Test_Case.COD_exception_singlecaseflow">
         <methods>
-          <include name="COD_bulk_action"/>
+          <include name="COD_shortage_exception_2"/>
           <include name="Launchurl"/>
         </methods>
-      </class> <!-- Test_Case.Crowley_on_dock_test -->
+      </class> <!-- Test_Case.COD_exception_singlecaseflow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

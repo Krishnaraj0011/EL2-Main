@@ -14,10 +14,10 @@ public class Dev_studio extends Constructor_Baseclass{
     }
 
     @FindBy(xpath="//a[normalize-space()='Launch portal']")
-    WebElement Launchportal;
+	public static WebElement Launchportal;
 
     @FindBy(xpath="//span[contains(text(),'WareHouse UserPortal')]")
-    WebElement WareHousePortal;
+   public static  WebElement WareHousePortal;
 
     public void clickLaunchPortal()
     {

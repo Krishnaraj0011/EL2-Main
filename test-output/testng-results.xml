@@ -1,31 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-24T10:04:01Z" name="Suite" finished-at="2026-07-24T10:10:03Z" duration-ms="361913">
+  <suite started-at="2026-07-29T10:58:52Z" name="Default suite" finished-at="2026-07-29T11:00:18Z" duration-ms="86052">
     <groups>
     </groups>
-    <test started-at="2026-07-24T10:04:01Z" name="Regression test" finished-at="2026-07-24T10:10:03Z" duration-ms="361913">
-      <class name="Test_Case.Crowley_on_dock_test">
-        <test-method is-config="true" signature="Launchurl()[pri:0, instance:Test_Case.Crowley_on_dock_test@67d18ed7]" started-at="2026-07-24T15:37:20Z" name="Launchurl" finished-at="2026-07-24T15:37:25Z" duration-ms="4748" status="PASS">
+    <test started-at="2026-07-29T10:58:52Z" name="Default test" finished-at="2026-07-29T11:00:18Z" duration-ms="86052">
+      <class name="Test_Case.COD_exception_singlecaseflow">
+        <test-method is-config="true" signature="Launchurl()[pri:0, instance:Test_Case.COD_exception_singlecaseflow@7b205dbd]" started-at="2026-07-29T16:28:52Z" name="Launchurl" finished-at="2026-07-29T16:29:01Z" duration-ms="8964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launchurl -->
-        <test-method signature="COD_bulk_action()[pri:0, instance:Test_Case.Crowley_on_dock_test@67d18ed7]" started-at="2026-07-24T15:37:25Z" name="COD_bulk_action" finished-at="2026-07-24T15:40:03Z" duration-ms="157997" status="PASS">
+        <test-method signature="COD_shortage_exception_2()[pri:0, instance:Test_Case.COD_exception_singlecaseflow@7b205dbd]" started-at="2026-07-29T16:29:01Z" name="COD_shortage_exception_2" finished-at="2026-07-29T16:30:18Z" duration-ms="77048" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[text()='Qty On Hand']/following::select[1]' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[text()='Qty On Hand']/following::select[1]' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at Test_Case.COD_exception_singlecaseflow.COD_shortage_exception_2(COD_exception_singlecaseflow.java:1094)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Qty On Hand']/following::select[1]"}
+  (Session info: chrome=150.0.7871.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [057393c216584476653f152dbb790483, findElement {using=xpath, value=//div[text()='Qty On Hand']/following::select[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.182, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\rameskr\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62243}, goog:processID: 116020, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62243/devtoo..., se:cdpVersion: 150.0.7871.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 057393c216584476653f152dbb790483
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- COD_bulk_action -->
-      </class> <!-- Test_Case.Crowley_on_dock_test -->
-      <class name="Test_Case.COD_UI_ordercreate">
-        <test-method is-config="true" signature="Launchurl()[pri:0, instance:Test_Case.COD_UI_ordercreate@5c44c582]" started-at="2026-07-24T15:34:02Z" name="Launchurl" finished-at="2026-07-24T15:34:08Z" duration-ms="5791" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Launchurl -->
-        <test-method signature="COD_UI_order()[pri:0, instance:Test_Case.COD_UI_ordercreate@5c44c582]" started-at="2026-07-24T15:34:08Z" name="COD_UI_order" finished-at="2026-07-24T15:37:20Z" duration-ms="192768" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- COD_UI_order -->
-      </class> <!-- Test_Case.COD_UI_ordercreate -->
-    </test> <!-- Regression test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- COD_shortage_exception_2 -->
+      </class> <!-- Test_Case.COD_exception_singlecaseflow -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
