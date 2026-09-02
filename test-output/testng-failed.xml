@@ -5,19 +5,9 @@
     <classes>
       <class name="Test_Case.COD_exception_singlecaseflow">
         <methods>
-          <include name="COD_shortage_exception_2"/>
+          <include name="Overage_exception_2"/>
         </methods>
       </class> <!-- Test_Case.COD_exception_singlecaseflow -->
     </classes>
   </test> <!-- Default test -->
-  <test parallel="none" name="Default test(failed)">
-    <classes>
-      <class name="Test_Case.COD_exception_singlecaseflow">
-        <methods>
-          <include name="COD_shortage_exception_2"/>
-          <include name="Launchurl"/>
-        </methods>
-      </class> <!-- Test_Case.COD_exception_singlecaseflow -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

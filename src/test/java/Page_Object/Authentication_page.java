@@ -1,18 +1,27 @@
 package Page_Object;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class Authentication_page extends Constructor_Baseclass{
+import com.aventstack.extentreports.Status;
 
-    public Authentication_page(WebDriver driver){
+import Base_Class.Base_methods;
+import Test_Utilities.Reuse_methods;
 
-        super(driver);
+public class Authentication_page extends Base_methods{
+	
+	public String OTP;
 
-    }
+	public Authentication_page(WebDriver driver) {
+	    this.driver = driver;
+	    PageFactory.initElements(driver, this);
+	}
 
-    @FindBy(xpath="//a[@id='loginText2']")
+	@FindBy(xpath="//a[@id='loginText2']")
     WebElement Login_with_corporate;
 
     @FindBy(xpath="//div[@data-bind='text: display']")
@@ -43,4 +52,23 @@ public class Authentication_page extends Constructor_Baseclass{
     {
     	Btn_submit.click();
     }
+    
+    public void Scanner() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter OTP");
+        OTP = scan.nextLine();
+    }
+    
+    public void loginWithMicrosoftAuthentication()
+    {
+     Authentication_page ap = new Authentication_page(driver);
+   	 BtnLogin_with_corporate();
+   	 Btn_verify_identity();
+   	 Reuse_methods rm = new Reuse_methods(driver); 
+   	 Scanner();
+   	 Verify_OTP(OTP);
+   	 Btn_submit();
+   	ET.log(Status.PASS, "Authentication completed successfully");
+    }
+    
 }
