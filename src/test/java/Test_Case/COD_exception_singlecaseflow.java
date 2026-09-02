@@ -34,7 +34,7 @@ public class COD_exception_singlecaseflow extends Base_methods {
 
 	public static WebDriverWait wait;
 
-	@Test
+	@Test (priority =1)
 	public void COD_shortage_exception() throws Exception {
 
 		Authentication_page ap = new Authentication_page(driver);
@@ -144,7 +144,7 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		driver.quit();
 	}
 
-	@Test
+	@Test (priority = 2)
 	public void COD_shortage_exception_2() throws Exception {
 
 		Authentication_page ap = new Authentication_page(driver);
@@ -167,16 +167,13 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		rm.switchToDefaultContent();
 		rm.Frame_PegaGadget1Ifr();
 
-		// Inbound trailer
-		// stage----------------------------------------------------------------
+		// Inbound trailer stage----------------------------------------------------------------
 		csf.inbound_trailer_action("Shortage");
 
-		// OSND
-		// stage---------------------------------------------------------------------------
+		// OSND stage---------------------------------------------------------------------------
 		csf.Osnd_stage_actions("Short Resolved");
 
-		// OSND
-		// stage----------------------------------------------------------------------------
+		// OSND stage----------------------------------------------------------------
 		csf.return_auth();
 
 		// OSNDstage----------------------------------------------------------------------------
@@ -257,7 +254,7 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		driver.quit();
 	}
 
-	@Test
+	@Test(priority = 3)
 	public void Overage_exception() throws Exception {
 
 		Authentication_page ap = new Authentication_page(driver);
@@ -360,7 +357,7 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		driver.quit();
 	}
 
-	@Test
+	@Test (priority =4)
 	public void Overage_exception_2() throws Exception {
 		
 		Authentication_page ap = new Authentication_page(driver);
