@@ -59,7 +59,7 @@ public class Authentication_page extends Base_methods{
         OTP = scan.nextLine();
     }
     
-    public void loginWithMicrosoftAuthentication()
+    public void loginWithMicrosoftAuthentication() throws Exception
     {
      Authentication_page ap = new Authentication_page(driver);
    	 BtnLogin_with_corporate();
@@ -68,7 +68,8 @@ public class Authentication_page extends Base_methods{
    	 Scanner();
    	 Verify_OTP(OTP);
    	 Btn_submit();
-   	ET.log(Status.PASS, "Authentication completed successfully");
+     ET.log(Status.PASS, "Authentication completed successfully");
+     Thread.sleep(2000);
     }
     
 }

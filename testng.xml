@@ -6,10 +6,11 @@
 	</listeners>
 	<test thread-count="5" name="Regression test">
 		<classes>
-			 <!-- <class name="Test_Case.COD_exception_singlecaseflow"/>-->			
+			
+			 <!--<class name="Test_Case.COD_exception_singlecaseflow"/>	 -->
 			 
 			 <class name="Test_Case.COD_UI_ordercreate" />
-			<class name="Test_Case.Crowley_on_dock_test" />
+			<class name="Test_Case.Crowley_on_dock_test" />		
 
 		</classes>
 	</test> 

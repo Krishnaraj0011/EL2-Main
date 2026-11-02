@@ -106,6 +106,8 @@ public class api_order_create extends Base_methods{
 		
 		DeliveryNumber = Orderref.path("DeliveryNumber").asText();
 		System.out.println("DeliveryNumber: "+ DeliveryNumber);
+		api_order_create api = new api_order_create(driver);
+		api.DeliveryNumber = "5432345";
 		
 		PONumber = Orderref.path("PONumber").asText();
 		System.out.println("PONumber: " + PONumber);
@@ -166,6 +168,12 @@ public class api_order_create extends Base_methods{
 		Invoicenum = Double.toString(InvoiceNumber);
 		System.out.println(Invoicenum);
 		Orderref.put("InvoiceNumber", Invoicenum);
+		
+//		double Delivery_num = Math.ceil(Math.random() * 200000);
+//		DeliveryNumber = Double.toString(Delivery_num);
+//		System.out.println(DeliveryNumber);
+//		Orderref.put("DeliveryNumber", DeliveryNumber);
+		
 		prettyString = Om.writerWithDefaultPrettyPrinter().writeValueAsString(On);
 
 		RestAssured.baseURI = "https://epicuatlb.estes-express.com";

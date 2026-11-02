@@ -151,6 +151,8 @@ public class Create_crowley_UI extends Base_methods {
 		wait.clickWithStaleRetry(Ponumber, this);
 		Thread.sleep(500);
 		Ponumber.sendKeys(api.PONumber);
+		
+		api.DeliveryNumber= "5432345";
 	
 		ET.log(Status.PASS, "Entered order ref details as expected");
 	}

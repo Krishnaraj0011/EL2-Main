@@ -44,6 +44,16 @@ public class Home_page extends Base_methods
 		ET.log(Status.PASS, "Successfully navigated to crowley TL page");
 	}
 	
+	@FindBy (xpath = "//li[@title='Order Create']" )
+	public static WebElement order_create;
+	
+	public void Order_create_click()
+	{
+		wait.waitForClickable(order_create);
+		order_create.click();
+		ET.log(Status.PASS, "Successfully navigated to order_create page");
+	}
+	
 	
 	
 	//Admin portal

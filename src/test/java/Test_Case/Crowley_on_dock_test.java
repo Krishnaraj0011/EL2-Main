@@ -135,6 +135,7 @@ public class Crowley_on_dock_test extends Base_methods {
 		ds.Ordertable_searchfield_clk();		
 		ds.Ordertable_searchicon_clk();	
 		ds.orderTableValidationforCrowleyOndock();
+		driver.manage().deleteAllCookies();
 		driver.quit();
 	}
 

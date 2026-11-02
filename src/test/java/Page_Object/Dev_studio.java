@@ -32,18 +32,20 @@ public class Dev_studio extends Base_methods {
 	@FindBy(xpath = "//span[contains(text(),'WareHouse UserPortal')]")
 	public static WebElement WareHousePortal;
 
-	public void clickLaunchPortal() {
-		wait.waitForVisible(Launchportal);
+	public void clickLaunchPortal() throws Exception {
+		Thread.sleep(1000);
+		//wait.waitForVisible(Launchportal);
 		wait.waitForClickable(Launchportal);
-		Launchportal.click();
+		wait.clickWithStaleRetry(Launchportal, this);
 		ET.log(Status.PASS, "Dev studio launched successfully");
-		
 	}
 
-	public void clickWarehousePortal() {
+	public void clickWarehousePortal() throws Exception {
+		Thread.sleep(1500);
 		wait.waitForClickable(WareHousePortal);
-		WareHousePortal.click();
+		wait.clickWithStaleRetry(WareHousePortal, this);
 		ET.log(Status.PASS, "Warehouse portal launched successfully");
+		Thread.sleep(2000);
 	}
 
 	@FindBy(xpath = "//span[contains(text(),'Admin Portal')]")
@@ -63,6 +65,14 @@ public class Dev_studio extends Base_methods {
 		wait.waitForClickable(favorites);
 		favorites.click();
 	}
+	
+	@FindBy(xpath="//span[@id='close']")
+	public static WebElement Closetab;
+	public void Closetab()
+	{
+		//driver.switchTo().defaultContent();
+		wait.clickWithStaleRetry(Closetab, this);
+	}
 
 	@FindBy(xpath = "//h3[normalize-space()='Data types']")
 	public static WebElement datatype;
@@ -75,13 +85,14 @@ public class Dev_studio extends Base_methods {
 	// POD confirm number elements
 	// ------------------------------------------------------------------------------
 
-	@FindBy(xpath = "(//span[contains(text(),'ConfrimPOD')])[3]")
+	@FindBy(xpath = "(//span[normalize-space()='ConfrimPOD'])[2]")
 	public static WebElement ConfirmPOD;
 
 	public void ConfirmPOD() {
-		wait.waitForVisible(ConfirmPOD);
+		//wait.waitForVisible(ConfirmPOD);
 		wait.waitForClickable(ConfirmPOD);
-		ConfirmPOD.click();
+		wait.clickWithStaleRetry(ConfirmPOD, this);
+		//ConfirmPOD.click();
 	}
 
 	@FindBy(xpath = "//button[normalize-space()='Actions']")
@@ -130,6 +141,7 @@ public class Dev_studio extends Base_methods {
 	}
 
 	public void POD_Confirm_Number() throws Exception {
+		Thread.sleep(1000);
 		Actiondropdown();
 		runoption();
 		Reuse_methods rm = new Reuse_methods(driver);
@@ -144,7 +156,7 @@ public class Dev_studio extends Base_methods {
 
 	// order table elements
 
-	@FindBy(xpath = "//div[@id='gridBody_left']/ul/li[24]/ul/li[2]//div[@string_type='field'][2]/span/i")
+	@FindBy(xpath = "//div[@id='gridBody_left']/ul/li[27]/ul/li[2]//div[@string_type='field'][2]/span/i")
 	public static WebElement ordertable_record;
 
 	public void Ordertable_record_clk() throws Exception {
@@ -158,6 +170,7 @@ public class Dev_studio extends Base_methods {
 
 	public void Ordertable_searchfield_clk() throws Exception {
 		api_order_create api = new api_order_create(driver);
+		System.out.println(api.Order1);
 		Ordertable_searchfield.sendKeys(api.Order1);
 		Thread.sleep(1500);
 	}
@@ -171,7 +184,7 @@ public class Dev_studio extends Base_methods {
 		Thread.sleep(3000);
 	}
 
-	public void clickOnLaunchPortal() {
+	public void clickOnLaunchPortal() throws Exception {
 		Dev_studio ds = new Dev_studio(driver);
 		Wait_Utilities wait = new Wait_Utilities(driver);
 		wait.waitForVisible(Launchportal);
@@ -179,7 +192,7 @@ public class Dev_studio extends Base_methods {
 		
 	}
 	
-	public void clickonWarehousePortal() {
+	public void clickonWarehousePortal() throws Exception {
 		wait.waitForVisible(WareHousePortal);
 		clickWarehousePortal();
 		ET.log(Status.PASS, "Warehouse portal launched successfully");

@@ -160,7 +160,7 @@ public class Crowley_ondock_UI extends Base_methods {
 		// Wait_Utilities WT = new Wait_Utilities(driver);
 		wait.waitForClickable(OutboundLoadtextbox);
 		OutboundLoadtextbox.click();
-		OutboundLoadtextbox.sendKeys("543452");
+		OutboundLoadtextbox.sendKeys("5432345");
 	}
 
 	@FindBy(xpath = "//button[@name='CrowleyOnDocOrderButtons_pyDisplayHarness_272']")
@@ -433,7 +433,7 @@ public class Crowley_ondock_UI extends Base_methods {
 	public static WebElement POD_review_overallcheckbox;
 
 	public void POD_review_overallcheckbox() {
-		wait.waitForVisible(POD_review_overallcheckbox);
+		wait.waitForClickable(POD_review_overallcheckbox);
 		wait.clickWithStaleRetry(POD_review_overallcheckbox, this);
 		//POD_review_overallcheckbox.click();
 	}

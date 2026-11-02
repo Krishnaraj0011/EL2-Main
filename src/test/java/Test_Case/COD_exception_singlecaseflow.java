@@ -28,13 +28,13 @@ import Test_Utilities.Reuse_methods;
 import Test_Utilities.api_order_create;
 import groovyjarjarantlr4.v4.parse.ANTLRParser.element_return;
 
-@Listeners(TestNG_listener.class)
+//@Listeners(TestNG_listener.class)
 
 public class COD_exception_singlecaseflow extends Base_methods {
 
 	public static WebDriverWait wait;
 
-	@Test (priority =1)
+	@Test 
 	public void COD_shortage_exception() throws Exception {
 
 		Authentication_page ap = new Authentication_page(driver);
@@ -89,12 +89,14 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		// POD confirm number action
 		ds.ConfirmPOD();
 		rm.Frame_PegaGadget0Ifr();
+		//rm.Frame_PegaGadget1Ifr();
 		ds.POD_Confirm_Number();
 		Thread.sleep(5000);
 		rm.switchto_newwindow();
 		rm.close();
 		rm.switchto_newwindow();
 		rm.close();
+		//ds.Closetab();
 		rm.switchto_newwindow();
 
 		// Approve POD
@@ -141,10 +143,11 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		ds.Ordertable_searchfield_clk();
 		ds.Ordertable_searchicon_clk();
 		ds.orderTableValidationforCrowleyOndock();
+		driver.manage().deleteAllCookies();
 		driver.quit();
 	}
 
-	@Test (priority = 2)
+	@Test 
 	public void COD_shortage_exception_2() throws Exception {
 
 		Authentication_page ap = new Authentication_page(driver);
@@ -251,10 +254,11 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		ds.Ordertable_searchfield_clk();
 		ds.Ordertable_searchicon_clk();
 		ds.orderTableValidationforCrowleyOndock();
+		driver.manage().deleteAllCookies();
 		driver.quit();
 	}
 
-	@Test(priority = 3)
+	@Test (priority =1)
 	public void Overage_exception() throws Exception {
 
 		Authentication_page ap = new Authentication_page(driver);
@@ -354,10 +358,11 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		ds.Ordertable_searchfield_clk();
 		ds.Ordertable_searchicon_clk();
 		ds.orderTableValidationforCrowleyOndock();
+		driver.manage().deleteAllCookies();
 		driver.quit();
 	}
 
-	@Test (priority =4)
+	@Test (priority = 2)
 	public void Overage_exception_2() throws Exception {
 		
 		Authentication_page ap = new Authentication_page(driver);
@@ -458,6 +463,7 @@ public class COD_exception_singlecaseflow extends Base_methods {
 		ds.Ordertable_searchfield_clk();
 		ds.Ordertable_searchicon_clk();
 		ds.orderTableValidationforCrowleyOndock();
+		driver.manage().deleteAllCookies();
 		driver.quit();
 	}
 

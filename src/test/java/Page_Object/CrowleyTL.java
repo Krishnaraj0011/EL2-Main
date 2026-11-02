@@ -65,7 +65,7 @@ public class CrowleyTL extends Base_methods {
 	public void Search_btn() throws Exception {
 		wait.waitForClickable(Search_Btn);
 		Search_Btn.click();
-		Thread.sleep(1500);
+		Thread.sleep(2500);
 	}
 
 	@FindBy(xpath = "//button[@name=\"ProcessCancellationRequestForCrowleyTL_pyDisplayHarness_45\"]")

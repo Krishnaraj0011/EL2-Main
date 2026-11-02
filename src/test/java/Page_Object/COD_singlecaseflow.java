@@ -141,7 +141,8 @@ public class COD_singlecaseflow extends Base_methods {
 	@FindBy(xpath = "//input[@name=\"$PpyWorkPage$pOrderPage$pShipmentList$l2$pPickupNumber\"]")
 	public static WebElement OutboundTrailer_input;
 
-	public static void Outboundtrailer_input() {
+	public static void Outboundtrailer_input() throws Exception {
+		Thread.sleep(1000);
 		wait.waitForVisible(OutboundTrailer_input);
 		OutboundTrailer_input.sendKeys("6543456");
 	}
@@ -178,7 +179,7 @@ public class COD_singlecaseflow extends Base_methods {
 		rm.selectclass(Outboundload_Select_drdn, "Loaded");
 		Outboundtrailer_input();
 		rm.selectclass(Outboundload_carrier, "Estes Express Lines");
-		// OutboundLoad_ID_input();
+		//OutboundLoad_ID_input();
 		Outboundload_submit_btn_clk();
 		Thread.sleep(1500);
 	}
@@ -218,6 +219,7 @@ public class COD_singlecaseflow extends Base_methods {
 	}
 
 	public static void return_loaded() throws Exception {
+		Thread.sleep(1000);
 		Reuse_methods rm = new Reuse_methods(driver);
 		String Loaded = status_text_outbound_stage.getText().toString();
 		System.out.println(Loaded);
